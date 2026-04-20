@@ -1,0 +1,114 @@
+/* BODY BACKGROUND */
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 60%;
+    margin: 80px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* CENTER TEXT (WELCOME PAGE) */
+.center-page {
+    text-align: center;
+}
+
+/* INPUT FIELDS */
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ALL BUTTONS */
+button {
+    padding: 14px 25px;
+    font-size: 16px;
+    background: #28a745;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* BIG START BUTTON */
+.start-btn {
+    padding: 16px 30px;
+    font-size: 18px;
+}
+
+/* TASK BOX */
+.task {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* STATUS COLORS */
+.done {
+    background: #d4edda;
+}
+
+.notdone {
+    background: #fff3cd;
+}
+
+.cancel {
+    background: #f8d7da;
+}
+
+/* DEFAULT STATUS */
+.notselected {
+    color: gray;
+    font-style: italic;
+}
+
+/* SCROLLABLE TASK LIST */
+#taskList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* VIEW HISTORY BUTTON (GREEN CARD STYLE) */
+.history-box {
+    margin: 10px auto;
+    padding: 15px;
+    width: 60%;
+    background: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.history-box:hover {
+    background: #218838;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    margin-bottom: 10px;
+    background: #333;
+}
+
+.back-btn:hover {
+    background: #555;
+}
+
+/* KEYBOARD FOCUS */
+button:focus {
+    outline: 2px solid #28a745;
+}

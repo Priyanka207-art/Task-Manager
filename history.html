@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="goBackApp()" class="back-btn">⬅ Back</button>
+
+<h1>📊 History</h1>
+
+<div id="historyList"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    let history = JSON.parse(localStorage.getItem("taskHistory")) || [];
+
+    history.forEach(function (record, index) {
+
+        let html = `
+        <div class="task">
+            <b>Record ${index + 1}</b><br>
+            Date: ${record.date}<br>
+            Progress: ${record.percentage}%<br>
+            Tasks: ${record.tasks.length}<br><br>
+
+            <button onclick="deleteRecord(${index})">Delete</button>
+        </div>
+        `;
+
+        $("#historyList").append(html);
+    });
+
+});
+
+function deleteRecord(i) {
+    let history = JSON.parse(localStorage.getItem("taskHistory"));
+    history.splice(i, 1);
+    localStorage.setItem("taskHistory", JSON.stringify(history));
+    location.reload();
+}
+
+function goBackApp() {
+    window.location.href = "app.html";
+}
+</script>
+
+</body>
+</html>

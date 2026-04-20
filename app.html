@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="goBackHome()" class="back-btn">⬅ Back</button>
+
+<h1>📅 Task Manager</h1>
+
+<input type="text" id="taskTopic" placeholder="Enter Task Topic">
+
+<div>
+    <select id="taskDate">
+        <option>Today</option>
+        <option>Tomorrow</option>
+        <option>This Week</option>
+    </select>
+
+    <input type="text" id="customDate" placeholder="Custom date">
+</div>
+
+<div>
+    <input type="text" id="taskName" placeholder="Enter task">
+    <button id="addTask">Add Task</button>
+</div>
+
+<h2 id="displayTopic"></h2>
+
+<div id="taskList"></div>
+
+<button id="evaluateBtn">Evaluate</button>
+
+<div class="dashboard">
+    <h3>Progress: <span id="progress">0%</span></h3>
+    <h3>Feedback: <span id="feedback">Start your day 🚀</span></h3>
+</div>
+
+<div class="history-box" onclick="goToHistory()">
+    📊 View History
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+function goBackHome() {
+    window.location.href = "index.html";
+}
+function goToHistory() {
+    window.location.href = "history.html";
+}
+</script>
+
+</body>
+</html>
